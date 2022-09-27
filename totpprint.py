@@ -44,7 +44,8 @@ def init(vid: str, pid: str, mm: int, dots: int):
 def print_totp(token: str, desc: str, printer):
     print(f'token:{token} desc:{desc}')
     printer.printer.textln(desc)
-    printer.printer.qr(token, ec=ERROR_CORRECT_H, size=5, center=True)
+    qrstr = f'otpauth://totp/backup@example.com?issuer={desc.replace(" ", "_")}-Backup&secret={token}'
+    printer.printer.qr(qrstr, ec=ERROR_CORRECT_H, size=4, center=True)
     printer.printer.block_text(f'{token}', font='a', columns=16)
 
 
