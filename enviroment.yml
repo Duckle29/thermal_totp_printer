@@ -1,0 +1,12 @@
+name: thermal_printer_totp
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - libusb
+  - wheel
+  - pip
+  - pysimplegui 
+  - pip:
+    - python-escpos~=3.0a8
