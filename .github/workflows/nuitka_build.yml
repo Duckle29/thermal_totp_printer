@@ -67,6 +67,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           path: artifacts
+      
+      - name: Display structure of downloaded files
+        run: ls -R
     
       - name: Create release from tag 
         uses: "marvinpinto/action-automatic-releases@latest"
@@ -75,6 +78,6 @@ jobs:
           prerelease: false
           files: |
             LICENSE
-            artifacts/Windows build/*.exe
-            artifacts/Linux build/*.bin
-#            artifacts/macOS build/*.app/**/*
+            ${{ github.workspace }}/artifacts/Windows build/*.exe
+            ${{ github.workspace }}/artifacts/Linux build/*.bin
+#            ${{ github.workspace }}/artifacts/macOS build/*.app/**/*
