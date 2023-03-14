@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
       
@@ -32,6 +33,13 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
+
+      - name: Ensure fuse2 is installed on Linux
+        if: runner.os == 'Linux'
+        run: |
+          sudo add-apt-repository universe
+          sudo apt update
+          sudo apt install -y libfuse2
           
       - name: Build Executable
         uses: Nuitka/Nuitka-Action@v0.4
