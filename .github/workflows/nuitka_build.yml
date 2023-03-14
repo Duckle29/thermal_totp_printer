@@ -42,7 +42,7 @@ jobs:
           sudo apt install -y libfuse2
           
       - name: Build Executable
-        uses: Nuitka/Nuitka-Action@v0.4
+        uses: Nuitka/Nuitka-Action@main
         with:
           script-name: totpprint.py
           onefile: true
