@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
       
     runs-on: ${{ matrix.os }}
     
@@ -54,7 +54,7 @@ jobs:
           path: |
             build/*.exe
             build/*.bin
-            build/*.app/**/*
+#            build/*.app/**/*
 
   release:
     needs: build
@@ -77,4 +77,4 @@ jobs:
             LICENSE
             artifacts/Windows build/*.exe
             artifacts/Linux build/*.bin
-            artifacts/macOS build/*.app/**/*
+#            artifacts/macOS build/*.app/**/*
