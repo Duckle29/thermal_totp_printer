@@ -78,6 +78,6 @@ jobs:
           prerelease: false
           files: |
             LICENSE
-            ${{ github.workspace }}/artifacts/Windows build/*.exe
-            ${{ github.workspace }}/artifacts/Linux build/*.bin
+            ${{ github.workspace }}/artifacts/Windows Build/*.exe
+            ${{ github.workspace }}/artifacts/Linux Build/*.bin
 #            ${{ github.workspace }}/artifacts/macOS build/*.app/**/*
