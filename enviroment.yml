@@ -10,3 +10,6 @@ dependencies:
   - pysimplegui 
   - pip:
     - python-escpos~=3.0a8
+    - ordered-set
+    - zstandard
+    - nuitka

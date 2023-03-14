@@ -1,1 +1,5 @@
 .vscode/*
+totpprint.build/*
+totpprint.dist/*
+totpprint.onefile-build
+*.exe

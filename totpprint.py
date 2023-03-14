@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# nuitka-project: --onefile
+# nuitka-project: --enable-plugin=tk-inter
+# nuitka-project: --include-package-data=escpos
+#### nuitka#project: --disable-console
 
 import argparse
 
