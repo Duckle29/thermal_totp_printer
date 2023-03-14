@@ -50,11 +50,11 @@ jobs:
 
       - name: Create release from tag 
         uses: "marvinpinto/action-automatic-releases@latest"
-          with:
-            repo_token: "${{ secrets.GITHUB_TOKEN }}"
-            prerelease: false
-            files: |
-              LICENSE
-              build/*.exe
-              build/*.bin
-              build/*.app/**/*
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            LICENSE
+            build/*.exe
+            build/*.bin
+            build/*.app/**/*
